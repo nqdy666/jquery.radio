@@ -4,10 +4,12 @@
 ### 依赖
 jquery-1.11.2.min.js
 ### 使用
+```
 引用css
-`<link rel="stylesheet" type="text/css" href="radiobox.css"/>`
+<link rel="stylesheet" type="text/css" href="radiobox.css"/>
 引用js
-`<script type="text/javascript" src="jquery.radiobox.js"></script>`
+<script type="text/javascript" src="jquery.radiobox.js"></script>
+```
 ### 基本方法
 在html页面上, input radiobox一定要包含一个label
 ```
