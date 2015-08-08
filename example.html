@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="radiobox.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="v1">1、请问您的年龄处于</div>
+    <div class="v2">
+        <div class="w1"><label><input type="radio" name="radio1" id="1"> 是</label></div>
+        <div class="w1"><label class="radiobox"><input type="radio" name="radio1" id="2">否</label></div>
+        <div class="w1"><label class="radiobox"><input type="radio" name="radio1" id="3">不确定</label></div>
+    </div>
+    <div class="v1">1、请问您的年龄处于</div>
+    <div class="v2">
+        <div class="w1"><label class="radiobox"><input type="radio" name="radio2">是</label></div>
+        <div class="w1"><label class="radiobox"><input type="radio" name="radio2">不确定</label></div>
+        <div class="w1"><label class="radiobox"><input type="radio" name="radio2">否</label></div>
+    </div>
+    <button id="testBtn">获取选中ID</button>
+    <button id="testBtn2">设置选中</button>
+</body>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<!--<script type="text/javascript" src="jquery-1.11.2.min.js"></script>-->
+<script type="text/javascript" src="jquery.radiobox.js"></script>
+
+<script>
+    $(function() {
+        var QjzdRadiobox = $.QjzdRadiobox("label");
+
+//        $("#testBtn").click(function () {
+//            alert($("input[name=radio1]").filter(":checked").attr("id"));
+//        });
+//        $("#testBtn2").click(function() {
+//            if ($("#1").prop("checked")) {
+//                $("#2").prop("checked", true).trigger("change");
+//            } else {
+//                $("#1").prop("checked", true).trigger("change");
+//            }
+//        });
+
+        $("#testBtn2").click(function() {
+            if ($("#1").prop("checked")) {
+                QjzdRadiobox.setChecked($("#1"), false);
+            } else {
+                QjzdRadiobox.setChecked($("#1").parent(), true);
+            }
+        });
+    });
+</script>
+</html>
